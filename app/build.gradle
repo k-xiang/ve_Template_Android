@@ -58,7 +58,7 @@ dependencies {
     implementation BaselineDeps.support_compat
     implementation BaselineDeps.appcompat
 
-    implementation platform ("com.volcengine.mars:platform:0.0.1-rc.49")
+    implementation platform ("com.volcengine.mars:platform:0.0.1-rc.50")
 
     implementation 'com.volcengine.mars:dev-tool'
     implementation 'com.volcengine.mars:base-component'
@@ -94,4 +94,6 @@ dependencies {
     debugImplementation project(":demos:applog")
     //引入apm内容
     debugImplementation project(":demos:apm")
+    //引入remote_config内容
+    debugImplementation project(":demos:remote_config")
 }
