@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.volcengine.rc.example">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    <application>
+        <activity
+            android:name=".RemoteConfigDemoActivity"
+            android:label="远程配置">
+            <intent-filter>
+                <action android:name="com.volcengine.mars.action.demo" />
+            </intent-filter>
+        </activity>
+        <activity android:name="com.volcengine.rc.test.VERCTestActivity" />
+
+        <activity android:name=".pages.GetAPITest" />
+        <activity
+            android:name=".pages.ChildProcessActivity"
+            android:process=":child_process" />
+
+    </application>
+</manifest>
