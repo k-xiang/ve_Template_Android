@@ -3,6 +3,7 @@ package com.volcengine.mars.demo.update;
 import android.content.Context;
 import com.volcengine.mars.update.AbsAppCommonContext;
 import com.volcengine.mars.update.DeviceWrapper;
+import java.util.HashMap;
 import java.util.Map;
 import org.jetbrains.annotations.NotNull;
 
@@ -36,6 +37,10 @@ public class AppCommonContextImpl extends AbsAppCommonContext {
 
     @Override
     public Map<String, String> getCustomKV() {
-        return null;
+        Map<String, String> customMap = new HashMap<>();
+        customMap.put("user_id", "326932");
+        customMap.put("user_department", "W0000010118");
+        customMap.put("user_role", "business");
+        return customMap;
     }
 }
