@@ -32,9 +32,7 @@ class MarsActivity : BaseActivity() {
     }
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
-        if (AppUtils.isDebug(this)) {
-            menuInflater.inflate(R.menu.main_menu, menu);
-        }
+        menuInflater.inflate(R.menu.main_menu, menu);
         return true;
     }
 

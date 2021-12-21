@@ -20,7 +20,7 @@ class AppLogInitTask : IInitTask() {
     override fun run() {
         val appInfo = OneKitApp.getInstance().get(AppInfo::class.java)
         val context = OneKitApp.getInstance().get(Context::class.java)
-        val aid = "000000"
+        val aid = "164314"
         val channel = appInfo.channel
         AppLog.init(context, InitConfig(aid, channel))
     }

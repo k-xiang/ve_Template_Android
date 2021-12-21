@@ -20,7 +20,7 @@ object H5Initializer {
             VEH5Config.Builder()
                 .enableDebug(true)
                 .setDeviceId("7135843788734")
-                .setOfflineResourceAccessKey("f8cbcdad44a36a88209f465172f7ce68")
+                .setOfflineResourceAccessKey("972daf6409e1d7a1239344e83f4cd5e0")
                 .setOfflineResourceUrlPrefixes(getCachePrefixes())
                 .setInternalCacheDirs(listOf("offline-resources"))
                 .enableKernel(true)

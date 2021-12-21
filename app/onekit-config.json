@@ -1,9 +1,30 @@
 {
   "project_info": {
-    "app_id": "231890",
+    "ak": "c82cc56a2723adf8a03f1d2078c74275",
+    "app_id": 1818181415,
     "privacy_mode": false,
-    "ak": "65fa38b9652c0ff6fcbc9a0840350f29",
-    "sk": "8eb61b3b771a9d6c4f90ef5ef3cc0027"
+    "sk": "1e7291f35da7af882e7feeb949c5657f"
+  },
+  "services": {
+    "update": {
+      "host": "https://pri-poc-api.vemarsdev.com"
+    },
+    "hotfix": {
+      "host": "https://pri-poc-api.vemarsdev.com"
+    },
+    "plugin": {
+      "host": "https://pri-poc-api.vemarsdev.com"
+    },
+    "h5": {
+      "js_host": "https://pri-poc-api.vemarsdev.com",
+      "gecko_host": "https://pri-poc-api.vemarsdev.com"
+    },
+    "sdk_monitor": {
+      "host": "https://pri-poc-api.vemarsdev.com"
+    },
+    "remote_config": {
+      "host": "https://pri-poc-api.vemarsdev.com"
+    }
   },
   "version": 1
 }

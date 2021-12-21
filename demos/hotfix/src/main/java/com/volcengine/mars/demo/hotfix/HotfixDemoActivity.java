@@ -66,6 +66,6 @@ public class HotfixDemoActivity extends AppCompatActivity {
         ModifyMark.modify();
         String desc = "text before fix";
         ((TextView) findViewById(R.id.tv_show)).setText(desc);
-        throw new RuntimeException("Simulate app crash");
+//        throw new RuntimeException("Simulate app crash");
     }
 }
