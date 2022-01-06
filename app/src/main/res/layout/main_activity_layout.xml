@@ -8,5 +8,5 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:textSize="24sp"
-        android:text="Hello MARS"/>
+        android:text="New version 1105"/>
 </FrameLayout>
