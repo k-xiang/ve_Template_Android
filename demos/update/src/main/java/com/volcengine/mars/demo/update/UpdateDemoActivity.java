@@ -3,12 +3,10 @@ package com.volcengine.mars.demo.update;
 import android.Manifest;
 import android.Manifest.permission;
 import android.os.Bundle;
-import android.text.TextUtils;
 import android.util.Log;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
-import android.widget.EditText;
 import androidx.appcompat.app.AppCompatActivity;
 import com.volcengine.mars.R;
 import com.volcengine.mars.update.OnUpdateStatusChangedListener;
@@ -17,7 +15,6 @@ import com.volcengine.mars.update.UpdateConfig;
 import com.volcengine.mars.update.UpdateDialogStyle;
 import com.volcengine.mars.update.UpdateStrategyInfo;
 import com.volcengine.mars.permissions.PermissionsManager;
-import java.lang.ref.WeakReference;
 
 public class UpdateDemoActivity extends AppCompatActivity {
     private static final String TAG = "UpdateHomeActivity";
@@ -42,7 +39,7 @@ public class UpdateDemoActivity extends AppCompatActivity {
         mButton.setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(final View v) {
-                VEUpdate.checkUpdate(UpdateDialogStyle.STYLE_BIG_INNER, new OnUpdateStatusChangedListener() {
+                VEUpdate.checkUpdate(UpdateDemoActivity.this, UpdateDialogStyle.STYLE_BIG_INNER, new OnUpdateStatusChangedListener() {
                     @Override
                     public void onUpdateStatusChanged(final int status) {
                         boolean isUpdateAvailable = VEUpdate.isRealCurrentVersionOut();
@@ -78,16 +75,11 @@ public class UpdateDemoActivity extends AppCompatActivity {
 
         String authority = "com.mars.android.update";
 
-        if (updateStrategyInfo == null) {
-            updateStrategyInfo = new UpdateStrategyInfo();
-        }
-        updateStrategyInfo.currentActivity = new WeakReference<>(this);
         return new UpdateConfig.Builder()
                 .setAppCommonContext(new AppCommonContextImpl(UpdateDemoActivity.this.getBaseContext()))
                 .setIUpdateForceExit(new UpdateForceExitImpl())
                 .setNotifyIcon(drawableRes)
                 .setFormalAuthority(authority)
-                .setUpdateStrategyInfo(updateStrategyInfo)
                 .build();
 
     }
