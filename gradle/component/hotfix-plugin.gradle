@@ -3,10 +3,12 @@
  */
 project.buildscript.dependencies.with {
     classpath "com.volcengine:hotfix-gradle-tools:2.3.3"
+    classpath 'wang.imallen.blog:pre:1.0.9'
 }
 
 project.ext.marsAppTasks.put("hotfix", { p ->
     p.with {
+        apply plugin: 'blog.imallen.wang.pre'
         apply plugin: 'com.bytedance.hotfix'
 
         hotfix {
