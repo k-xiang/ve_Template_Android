@@ -13,7 +13,6 @@ import java.util.List;
 
 public class LaunchApplication extends Application {
 
-    private static final String TAG = "LaunchApplication";
     public static Application sApplication;
     public static String sProcessName;
     public static boolean sIsMainProcess;
