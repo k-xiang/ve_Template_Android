@@ -36,7 +36,6 @@ public class HotfixHelper {
      */
     private static final class DemoFrankieConfig extends FrankieConfigExternalAdapter {
 
-        private static final String TAG = "DemoFrankieConfig";
 
 
         public DemoFrankieConfig(@NonNull Application application) {
